@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>CSE 494 - Spring 2021 - Project</title>
+        <link rel='stylesheet' href='css/styles.css'>
+        <script src='https://d3js.org/d3.v5.min.js'></script>
+		<script src="https://d3js.org/d3-geo-projection.v3.min.js"></script>
+        <script src='scripts/scatter.js'></script>
+        <script src='scripts/line.js'></script>
+        <script src='scripts/project.js'></script>
+        
+    </head>
+    <body>
+        <div id='wrapper'>
+
+            <h2>CSE494 Project</h2>
+            <h3>Alan Hafeed - ahafeed@asu.edu - 1221610494</h3>
+            <h3>Matthew Bertrandt - email - ASUID</h3>
+            <h3>Conner Erickson - email - ASUID</h3>
+            <h3>Shaswat Singh - email - ASUID</h3>
+            <hr style='width:100%'> 
+
+            &nbsp;Year:&nbsp; <!-- Year Widget -->
+                <input id='year-input' type='number' value='1995' min='1995' max='2018' onchange='redrawPlot();'/> 
+
+            &nbsp;X_Attribute&nbsp; <!-- X Attribute Widget -->
+            <select id='x-attribute-select' onchange='drawScatterPlot();'>
+                <option value='Metrics.State Fragility Index'>Metrics.State Fragility Index</option>
+
+                <option value='Metrics.Effectiveness.Economic Effectiveness'>Metrics.Effectiveness.Economic Effectiveness</option>
+                <option value='Metrics.Effectiveness.Effectiveness Score'>Metrics.Effectiveness.Effectiveness Score</option>
+                <option value='Metrics.Effectiveness.Political Effectiveness'>Metrics.Effectiveness.Political Effectiveness</option>
+                <option value='Metrics.Effectiveness.Security Effectiveness'>Metrics.Effectiveness.Security Effectiveness</option>
+                <option value='Metrics.Effectiveness.Social Effectiveness'>Metrics.Effectiveness.Social Effectiveness</option>
+
+                <option value='Metrics.Legitimacy.Economic Legitimacy'>Metrics.Legitimacy.Economic Legitimacy</option>
+                <option value='Metrics.Legitimacy.Legitimacy Score'>Metrics.Legitimacy.Legitimacy Score</option>
+                <option value='Metrics.Legitimacy.Political Legitimacy'>Metrics.Legitimacy.Political Legitimacy</option>
+                <option value='Metrics.Legitimacy.Security Legitimacy'>Metrics.Legitimacy.Security Legitimacy</option>
+                <option value='Metrics.Legitimacy.Social Legitimacy'>Metrics.Legitimacy.Social Legitimacy</option>
+            </select>
+
+            &nbsp;Y_Attribute&nbsp; <!-- Y Attribute Widget -->
+            <select id='y-attribute-select' onchange='drawScatterPlot();'>
+                <option value='Metrics.State Fragility Index'>Metrics.State Fragility Index</option>
+
+                <option value='Metrics.Effectiveness.Economic Effectiveness'>Metrics.Effectiveness.Economic Effectiveness</option>
+                <option value='Metrics.Effectiveness.Effectiveness Score'>Metrics.Effectiveness.Effectiveness Score</option>
+                <option value='Metrics.Effectiveness.Political Effectiveness'>Metrics.Effectiveness.Political Effectiveness</option>
+                <option value='Metrics.Effectiveness.Security Effectiveness'>Metrics.Effectiveness.Security Effectiveness</option>
+                <option value='Metrics.Effectiveness.Social Effectiveness'>Metrics.Effectiveness.Social Effectiveness</option>
+
+                <option value='Metrics.Legitimacy.Economic Legitimacy'>Metrics.Legitimacy.Economic Legitimacy</option>
+                <option value='Metrics.Legitimacy.Legitimacy Score'>Metrics.Legitimacy.Legitimacy Score</option>
+                <option value='Metrics.Legitimacy.Political Legitimacy'>Metrics.Legitimacy.Political Legitimacy</option>
+                <option value='Metrics.Legitimacy.Security Legitimacy'>Metrics.Legitimacy.Security Legitimacy</option>
+                <option value='Metrics.Legitimacy.Social Legitimacy'>Metrics.Legitimacy.Social Legitimacy</option>
+            </select>
+
+            <svg id='worldMap'></svg>
+            <svg id='radar'></svg>
+            <svg id='line'></svg>
+            <svg id='scatterPlot'></svg>
+            <div id='tooltip' hidden></div>
+
+            <br/>
+            Source: <a href='https://corgis-edu.github.io/corgis/csv/state_fragility/' target='_blank'>State Fragility CSV File From the CORGIS Dataset Project
+            </a>
+            <br/>
+
+          </div>
+    </body>
+</html>

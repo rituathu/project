@@ -1,0 +1,63 @@
+#wrapper {
+    margin:auto;
+    width:100%;
+}
+  
+input {
+    width:100px;
+}
+
+select {
+    width:350px;
+}
+
+html {
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+circle {
+    opacity: 0.2;
+}
+
+#worldMap {
+    width:48% !important;
+	height: 600px;
+}
+
+svg {
+	border:1px solid gray;
+	width:48%;
+	height:600px;
+}
+select, input[type=button] {
+	width:100%;
+	margin-bottom:5px;
+}
+.row {
+	margin-top: 15px;
+}
+.country {
+	stroke: black;
+	stroke-width: 1;
+	fill: honeydew;
+}
+.graticule {
+	fill: none;
+	stroke: #777;
+	stroke-width:.5;
+	stroke-opacity:.5;
+}
+.boundary {
+	fill:none;
+	stroke: black;
+	stroke-width:2;
+	stroke-opacity:1;
+}
+
+#radarChart {
+    width:700px;
+}
+
+#lineChart {
+    width:700px;
+}
